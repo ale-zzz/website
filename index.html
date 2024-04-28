@@ -21,29 +21,52 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        header, section {
-            margin-bottom: 20px;
+        header, section, nav, article {
             padding: 0 10px;
         }
-        h1, h2 {
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
             color: #333;
         }
-        p {
+        p, li {
             margin: 5px 0;
             line-height: 1.5;
         }
         a {
             color: #06c;
         }
+        .blog {
+            margin-top: 20px;
+        }
+        article {
+            margin-bottom: 20px;
+        }
         @media (max-width: 600px) {
-            .container {
+            .container, nav {
                 margin: 20px 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#blog">Blog</a>
+    </nav>
+    <div class="container" id="home">
         <header>
             <h1>Alessio Rogger</h1>
             <p>Digital Enabler</p>
@@ -69,6 +92,21 @@
         <section>
             <h2>Bildung</h2>
             <p>Dipl. Wirtschaftsinformatiker HF, Altstetten - seit 04.2021</p>
+        </section>
+    </div>
+    <div class="container blog" id="blog">
+        <section>
+            <h2>Blog</h2>
+            <article>
+                <h3>Mein erster Blogbeitrag</h3>
+                <p>Veröffentlicht am 01. Mai 2024</p>
+                <p>Hier beginnt der Inhalt deines ersten Blogbeitrags. Du kannst hier Updates, Gedanken oder Geschichten teilen.</p>
+            </article>
+            <article>
+                <h3>Ein weiterer Blogbeitrag</h3>
+                <p>Veröffentlicht am 15. Mai 2024</p>
+                <p>Dies ist ein weiterer interessanter Beitrag in deinem Blog. Erzähle mehr über deine Projekte oder teile Erfahrungen.</p>
+            </article>
         </section>
     </div>
 </body>
